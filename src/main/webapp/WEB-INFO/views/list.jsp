@@ -22,7 +22,7 @@
         <input type="submit" class="button" name="operator" value="*"/>
         <input type="submit" class="button" name="operator" value="/"/>
     </p>
-    <h1>Kết quả là: ${result}</h1>
+    <h1>Result: ${result}</h1>
 </form>
 </body>
 </html>
