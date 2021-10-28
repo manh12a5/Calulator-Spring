@@ -53,6 +53,10 @@ public class Calculator {
             case "/":
                 result = this.leftNumber / this.rightNumber;
                 break;
+            case "C":
+                this.leftNumber = 0;
+                this.rightNumber = 0;
+                break;
         }
         return result;
     }

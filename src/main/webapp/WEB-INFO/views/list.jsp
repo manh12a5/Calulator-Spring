@@ -14,15 +14,24 @@
 <body>
 <h1>Calculator:</h1>
 <form method="post">
-    <input type="text" name="left"/>
-    <input type="text" name="right"/>
-    <p>
-        <input type="submit" class="button" name="operator" value="+"/>
-        <input type="submit" class="button" name="operator" value="-"/>
-        <input type="submit" class="button" name="operator" value="*"/>
-        <input type="submit" class="button" name="operator" value="/"/>
-    </p>
-    <h1>Result: ${result}</h1>
+    <div>
+        <input type="text" name="left"/>
+        <input type="text" name="right"/>
+    </div>
+    <div>
+        <p>
+            <input type="submit" class="button" name="operator" value="+"/>
+            <input type="submit" class="button" name="operator" value="-"/>
+            <input type="submit" class="button" name="operator" value="*"/>
+            <input type="submit" class="button" name="operator" value="/"/>
+        </p>
+    </div>
+    <div>
+        <input style="width: 100px" type="submit" class="button" name="operator" value="C"/>
+    </div>
+    <div>
+        <h1>Result: ${result}</h1>
+    </div>
 </form>
 </body>
 </html>
