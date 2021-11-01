@@ -38,4 +38,23 @@ public class Calculator {
         this.operator = operator;
     }
 
+    public double calculateResult() {
+        double result = 0;
+        switch (this.operator) {
+            case "+":
+                result = this.leftNumber + this.rightNumber;
+                break;
+            case "-":
+                result = this.leftNumber - this.rightNumber;
+                break;
+            case "*":
+                result = this.leftNumber * this.rightNumber;
+                break;
+            case "/":
+                result = this.leftNumber / this.rightNumber;
+                break;
+        }
+        return result;
+    }
+
 }
