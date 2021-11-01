@@ -21,8 +21,27 @@ public class CalculatorController {
                                  @RequestParam String operator,
                                  Model model) {
         Calculator calculator = new Calculator(leftNumber, rightNumber, operator);
-        double result = calculator.calculateResult();
+        double result = calculateResult(leftNumber, rightNumber, operator);
         model.addAttribute("result", result);
         return "list";
+    }
+
+    private double calculateResult(Double leftNumber, Double rightNumber, String operator) {
+        double result = 0;
+        switch (operator) {
+            case "+":
+                result = leftNumber + rightNumber;
+                break;
+            case "-":
+                result = leftNumber - rightNumber;
+                break;
+            case "*":
+                result = leftNumber * rightNumber;
+                break;
+            case "/":
+                result = leftNumber / rightNumber;
+                break;
+        }
+        return result;
     }
 }
