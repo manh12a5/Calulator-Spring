@@ -27,9 +27,6 @@
         </p>
     </div>
     <div>
-        <input style="width: 100px" type="submit" class="button" name="operator" value="C"/>
-    </div>
-    <div>
         <h1>Result: ${result}</h1>
     </div>
 </form>
