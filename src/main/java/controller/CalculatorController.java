@@ -6,6 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.regex.Pattern;
+
 @Controller
 @RequestMapping("/calculator")
 public class CalculatorController {
@@ -20,6 +22,7 @@ public class CalculatorController {
                                  @RequestParam("right") Double rightNumber,
                                  @RequestParam String operator,
                                  Model model) {
+        Pattern pattern = Pattern.compile("\\d");
         Calculator calculator = new Calculator(leftNumber, rightNumber, operator);
         double result = calculateResult(leftNumber, rightNumber, operator);
         model.addAttribute("result", result);
@@ -44,4 +47,5 @@ public class CalculatorController {
         }
         return result;
     }
+
 }
