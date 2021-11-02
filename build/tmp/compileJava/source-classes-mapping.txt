@@ -1,8 +1,8 @@
-model/Calculator.java
- model.Calculator
-config/AppConfiguration.java
- config.AppConfiguration
 config/AppInit.java
  config.AppInit
+config/AppConfiguration.java
+ config.AppConfiguration
+model/Calculator.java
+ model.Calculator
 controller/CalculatorController.java
  controller.CalculatorController

@@ -1,32 +1,34 @@
 package model;
 
+import java.util.regex.Pattern;
+
 public class Calculator {
-    private double leftNumber;
-    private double rightNumber;
+    private String leftNumber;
+    private String rightNumber;
     private String operator;
 
     public Calculator() {
     }
 
-    public Calculator(double leftNumber, double rightNumber, String operator) {
+    public Calculator(String leftNumber, String rightNumber, String operator) {
         this.leftNumber = leftNumber;
         this.rightNumber = rightNumber;
         this.operator = operator;
     }
 
-    public double getLeftNumber() {
+    public String getLeftNumber() {
         return leftNumber;
     }
 
-    public void setLeftNumber(double leftNumber) {
+    public void setLeftNumber(String leftNumber) {
         this.leftNumber = leftNumber;
     }
 
-    public double getRightNumber() {
+    public String getRightNumber() {
         return rightNumber;
     }
 
-    public void setRightNumber(double rightNumber) {
+    public void setRightNumber(String rightNumber) {
         this.rightNumber = rightNumber;
     }
 
@@ -36,6 +38,32 @@ public class Calculator {
 
     public void setOperator(String operator) {
         this.operator = operator;
+    }
+
+    public double calculateResult(String leftNumber, String rightNumber, String operator) {
+        double result = 0;
+        Pattern pattern = Pattern.compile("\\d$");
+        if (pattern.matcher(leftNumber).matches() && pattern.matcher(rightNumber).matches()) {
+            double i = Double.parseDouble(leftNumber);
+            double j = Double.parseDouble(rightNumber);
+
+            switch (operator) {
+                case "+":
+                    result = i + j;
+                    break;
+                case "-":
+                    result = i - j;
+                    break;
+                case "*":
+                    result = i * j;
+                    break;
+                case "/":
+                    result = i / j;
+                    break;
+            }
+        }
+
+        return result;
     }
 
 }

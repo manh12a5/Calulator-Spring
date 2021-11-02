@@ -6,8 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.regex.Pattern;
-
 @Controller
 @RequestMapping("/calculator")
 public class CalculatorController {
@@ -18,34 +16,14 @@ public class CalculatorController {
     }
 
     @PostMapping("")
-    public String showInfo(@RequestParam("left") Double leftNumber,
-                                 @RequestParam("right") Double rightNumber,
+    public String showInfo(@RequestParam("left") String leftNumber,
+                                 @RequestParam("right") String rightNumber,
                                  @RequestParam String operator,
                                  Model model) {
-        Pattern pattern = Pattern.compile("\\d");
-        Calculator calculator = new Calculator(leftNumber, rightNumber, operator);
-        double result = calculateResult(leftNumber, rightNumber, operator);
+        Calculator calculator = new Calculator();
+        double result = calculator.calculateResult(leftNumber, rightNumber, operator);
         model.addAttribute("result", result);
         return "list";
-    }
-
-    private double calculateResult(Double leftNumber, Double rightNumber, String operator) {
-        double result = 0;
-        switch (operator) {
-            case "+":
-                result = leftNumber + rightNumber;
-                break;
-            case "-":
-                result = leftNumber - rightNumber;
-                break;
-            case "*":
-                result = leftNumber * rightNumber;
-                break;
-            case "/":
-                result = leftNumber / rightNumber;
-                break;
-        }
-        return result;
     }
 
 }
