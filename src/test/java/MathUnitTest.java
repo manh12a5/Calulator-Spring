@@ -23,4 +23,14 @@ public class MathUnitTest {
         assertEquals(calculator.calculateResult(leftNumber, rightNumber, operator), result);
     }
 
+    @Test
+    @DisplayName("Failure Test")
+    public void failureTest() {
+        String leftNumber = "1";
+        String rightNumber = "1";
+        String operator = "+";
+        double result = 3;
+        assertEquals(calculator.calculateResult(leftNumber, rightNumber, operator), result);
+    }
+
 }
