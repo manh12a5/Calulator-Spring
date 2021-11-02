@@ -26,10 +26,10 @@ public class MathUnitTest {
     @Test
     @DisplayName("Failure Test")
     public void failureTest() {
-        String leftNumber = "1";
-        String rightNumber = "1";
-        String operator = "+";
-        double result = 3;
+        String leftNumber = "2";
+        String rightNumber = "2";
+        String operator = "*";
+        double result = 4;
         assertEquals(calculator.calculateResult(leftNumber, rightNumber, operator), result);
     }
 
