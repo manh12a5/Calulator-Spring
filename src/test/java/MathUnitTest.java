@@ -29,7 +29,7 @@ public class MathUnitTest {
         String leftNumber = "2";
         String rightNumber = "2";
         String operator = "*";
-        double result = 4;
+        double result = 5;
         assertEquals(calculator.calculateResult(leftNumber, rightNumber, operator), result);
     }
 
