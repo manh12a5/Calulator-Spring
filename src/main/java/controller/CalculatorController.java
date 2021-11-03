@@ -21,7 +21,7 @@ public class CalculatorController {
                                  @RequestParam String operator,
                                  Model model) {
         Calculator calculator = new Calculator();
-        double result = calculator.calculateResult((leftNumber+1), rightNumber, operator);
+        double result = calculator.calculateResult(leftNumber, rightNumber, operator);
         model.addAttribute("result", result);
         return "list";
     }
