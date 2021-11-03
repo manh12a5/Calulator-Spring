@@ -24,6 +24,14 @@ public class MathUnitTest {
     }
 
     @Test
+    @DisplayName("Simple test 2")
+    public void failure2() {
+        String leftNumber = "2";
+        String rightNumber = "2";
+        assertSame(leftNumber, rightNumber);
+    }
+
+    @Test
     @DisplayName("Failure Test")
     public void failureTest() {
         String leftNumber = "2";
