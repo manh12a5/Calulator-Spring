@@ -42,7 +42,7 @@ public class Calculator {
 
     public double calculateResult(String leftNumber, String rightNumber, String operator) {
         double result = 0;
-        Pattern pattern = Pattern.compile("\\d$");
+        Pattern pattern = Pattern.compile("^\\d*$");
         if (pattern.matcher(leftNumber).matches() && pattern.matcher(rightNumber).matches()) {
             double i = Double.parseDouble(leftNumber);
             double j = Double.parseDouble(rightNumber);

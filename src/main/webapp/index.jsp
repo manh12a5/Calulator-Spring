@@ -11,6 +11,8 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <a href="/calculator">
+    <button>Calculator</button>
+  </a>
   </body>
 </html>
