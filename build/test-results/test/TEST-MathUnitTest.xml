@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MathUnitTest" tests="3" skipped="0" failures="1" errors="0" timestamp="2021-11-03T10:32:48" hostname="THINKPAD" time="0.027">
+<testsuite name="MathUnitTest" tests="3" skipped="0" failures="1" errors="0" timestamp="2021-11-04T06:27:17" hostname="THINKPAD" time="0.026">
   <properties/>
-  <testcase name="Simple test" classname="MathUnitTest" time="0.021"/>
+  <testcase name="Simple test" classname="MathUnitTest" time="0.018"/>
   <testcase name="Simple test 2" classname="MathUnitTest" time="0.002"/>
-  <testcase name="Failure Test" classname="MathUnitTest" time="0.004">
+  <testcase name="Failure Test" classname="MathUnitTest" time="0.005">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;4.0&gt; but was: &lt;5.0&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;4.0&gt; but was: &lt;5.0&gt;
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
