@@ -1,6 +1,6 @@
 pipeline {
     agent any
-        tool {
+        tools {
             gradle 'Gradle 6.9.1'
             jdk 'JDK8'
         }
