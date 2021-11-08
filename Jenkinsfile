@@ -14,6 +14,11 @@ pipeline {
         }
         stage('Test') {
             steps {
+                bat 'gradle test'
+            }
+        }
+        stage('Install') {
+            steps {
                 bat 'gradle build'
             }
         }
