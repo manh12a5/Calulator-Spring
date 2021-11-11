@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/manh12a5/Calulator-Spring.git'
+//                 git 'https://github.com/manh12a5/Calulator-Spring.git'
                 bat 'gradle clean'
             }
         }
